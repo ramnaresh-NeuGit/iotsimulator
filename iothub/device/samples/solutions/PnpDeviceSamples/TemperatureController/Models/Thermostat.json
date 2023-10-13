@@ -1,0 +1,56 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:example:Thermostat;1",
+  "@type": "Interface",
+  "displayName": "Thermostat",
+  "description": "Reports current temperature and provides desired temperature control.",
+  "contents": [
+    {
+      "@type": [
+        "Telemetry",
+        "Temperature"
+      ],
+      "name": "temperature",
+      "displayName": "Temperature",
+      "description": "Temperature in degrees Celsius.",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "name": "targetTemperature",
+      "schema": "double",
+      "displayName": "Target Temperature",
+      "description": "Allows to remotely specify the desired target temperature.",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Humidity"
+      ],
+      "name": "targetHumidity",
+      "schema": "double",
+      "displayName": "Target Humidity",
+      "description": "Allows to remotely specify the desired target Humidity.",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "name": "maxTempSinceLastReboot",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "displayName": "Max temperature since last reboot.",
+      "description": "Returns the max temperature since last device reboot."
+    }
+
+  ]
+}
